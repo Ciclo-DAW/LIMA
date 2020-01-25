@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>El Heraldo de HTML5</title>
+  <style>
+    html {
+      background-color: #fef7f2;
+    }
+
+    /*O corpo da páxina*/
+    body {
+      width: 700px;
+      margin: 6px auto 0;
+      border-top: solid 3px #8e8e8e;
+      color: #484848;
+      font-size: 13px;
+      position: relative;
+      font-family: Times, "Times New Roman", serif;
+    }
+
+    /*Todos os enlaces non visitados*/
+    a:link {
+      color: #484848;
+      text-decoration: none;
+    }
+
+    /*Ao pasar por encima dos enlaces e ao facer click neles*/
+    a:hover,
+    a:active {
+      text-decoration: underline;
+    }
+
+    /*Todos os párrafos da páxina*/
+    p {
+      margin: 0 0 13px 0;
+      text-align: justify;
+      line-height: 1em;
+    }
+
+    /*Os encabezados de primeiro nivel*/
+    h1 {
+      text-shadow: #fff 1px 1px;
+      font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    /*Os encabezados de segundo nivel*/
+    h2 {
+      font-family: LeagueGothic, Tahoma, Geneva, sans-serif;
+      padding: 7px 0 0 0;
+      margin: 0;
+    }
+
+    /*O elemento header cando e fillo de body*/
+    body>header {
+      border-top: solid 1px #8e8e8e;
+      border-bottom: solid 1px #8e8e8e;
+      margin: 1px auto;
+      padding-top: 8px;
+      text-align: center;
+
+    }
+
+    /*Os encabezados de primeiro nivel, cando estean contidos nun elmento header e este sexa fillo do elmento body*/
+    body>header h1 {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 60px;
+      position: relative;
+      margin: 10px 0 0 0;
+      font-weight: normal;
+      line-height: .9;
+    }
+
+    /*A etiqueta span se está contida nun encabezadosde primeiro nivel, cando este estea contidos nun elemento header, e este sexa fillo do elemento body*/
+    body>header h1 span {
+      position: absolute;
+      left: 40px;
+      top: 40%;
+      font-size: 30%;
+    }
+
+    /*Os enlaces en estado activo e hover, cando estean nun encabezado de primeiro nivel, e cando este estea contido nun elmento header, e este sexa fillo do elmento body*/
+    body>header h1 a:active,
+    body>header h1 a:hover {
+      text-decoration: none;
+    }
+
+    /*Os parágrafos que estean contidos nun elmento header, e este sexa fillo do elmento body*/
+    body>header p {
+      line-height: 29px;
+      font-size: 12px;
+      font-size: 0.75rem;
+      margin: 0;
+    }
+
+    /*A clase tagline*/
+    .tagline {
+      text-transform: lowercase;
+      background-image: none;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-align: center;
+      text-shadow: none;
+      font-weight: normal;
+      line-height: 2;
+    }
+
+    /*O elmento nav*/
+    nav {
+      border-top: double 3px #8e8e8e;
+      text-align: center;
+    }
+
+    /*O elmento ul cando estea dentro do nav*/
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+      white-space: nowrap;
+      text-align: center;
+      width: 10.2em;
+    }
+
+    /*O elmento li cando estea dentro do nav*/
+    nav li {
+      display: inline-block;
+      padding: 0 1em;
+    }
+
+    /*Os enlaces cando estean dentro do nav*/
+    nav a {
+      text-transform: uppercase;
+      font-size: 13px;
+      font-size: 0.875rem;
+      display: block;
+      line-height: 27px;
+    }
+
+    /*O elmento main*/
+    main {
+      margin: 1px 0 0 0;
+      border-top: solid 1px #8e8e8e;
+      padding: 15px 0;
+      clear: both;
+    }
+
+    /*O primeiro elmento de tipo div que sexa fillo do elmento main*/
+    main div:first-of-type {
+      padding: 8px;
+    }
+
+    /*A primeira letra dos parágrafos impares que estean dentro do primeiro elemento de tipo div que sexa fillo do elemento main*/
+    main div:first-of-type p:nth-of-type(odd)::first-letter {
+      font-size: 2em;
+    }
+
+    /*O segundo elemento div que sexa fillo do elemento main*/
+    main>div:nth-child(2) {
+      padding: 8px;
+      background-color: rgba(100, 100, 100, 0.1);
+    }
+
+    /*Todos os parágrafos contidos no elemento #ac1 menos o último*/
+    #ac1 p:not(:last-child) {
+      padding-bottom: 8px;
+      border-bottom: 1px dashed #8e8e8e;
+    }
+
+    /*Os encabezados h1 que estean contidos dentro do primeiro div que sexa fillo do elemento main*/
+    main>div:first-child h1 {
+      font-size: 33px;
+      padding: 0 0 4px 0;
+      letter-spacing: -1px;
+      text-align: left;
+    }
+
+    /*Os encabezados h1 que estean contidos dentro do elemento main*/
+    main h1 {
+      font-size: 22px;
+      margin: 10px 0 8px 0;
+
+    }
+
+    /*Os encabezados h2 que estena contidos dentro do elmento article*/
+    article h2 {
+      background: url(../images/bg-header.gif) no-repeat top center;
+      font-size: 14px;
+      text-transform: none;
+      font-family: "Times New Roman", Times, serif;
+      font-weight: bold;
+      text-shadow: none;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <span>El </span>
+      <a href="#">Heraldo de HTML</a>
+    </h1>
+    <h2 class="tagline">Producido al viejo estilo</h2>
+    <p id="volume">Vol. MMXI</p>
+    <p id="issue">
+      <time datetime="1904-06-04" pubdate="">June 4, 1904</time>
+    </p>
+    <nav>
+      <ul>
+        <li>
+          <a href="#top">Inicio</a>
+        </li>
+        <li>
+          <a href="register.html">Resgistro</a>
+        </li>
+        <li>
+          <a href="canvas.html">Demos de Canvas</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div id="primary">
+      <article id="ac1">
+        <h1>El vídeo es la última frontera, y se ha conquistado!</h1>
+        <div class="content">
+          <p>Aliquam erat volutpat. Mauris vel neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus
+            quam,
+            egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla.</p>
+          <p>In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum
+            nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur,
+            nisl orci bibendum elit, eu euismod magna sapien ut nibh. Aliquam erat volutpat. Mauris vel neque sit amet
+            nunc gravida congue sed sit amet purus.</p>
+          <p>Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla. In condimentum orci
+            id
+            nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum nunc non neque
+            consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci
+            bibendum
+            elit, eu euismod magna sapien ut nibh.</p>
+          <p>Neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia
+            vel velit. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit
+            lorem quis egestas. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum,
+            arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+        </div>
+      </article>
+      <article>
+        <h1>Es posible hacer grandes cosas con CSS</h1>
+        <div class="content">
+          <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam
+            vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+          <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque
+            faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in
+            blandit. </p>
+          <p>Quisque lacus quam, egestas ac tincidunt a, lacinia vel velit. Morbi ac commodo nulla. In condimentum orci
+            id
+            nisl volutpat bibendum. Quisque commodo hendrerit lorem quis egestas. Vivamus rutrum nunc non neque
+            consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat consectetur, nisl orci
+            bibendum
+            elit, eu euismod magna sapien ut nibh.</p>
+          <p>Neque sit amet nunc gravida congue sed sit amet purus. Quisque lacus quam, egestas ac tincidunt a, lacinia
+            vel velit. Morbi ac commodo nulla. In condimentum orci id nisl volutpat bibendum. Quisque commodo hendrerit
+            lorem quis egestas. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum,
+            arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+          <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque
+            faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in
+            blandit. </p>
+        </div>
+      </article>
+    </div>
+    <div id="secondary">
+      <article id="ac2">
+        <header>
+          <h1>El texto con sombra es el nuevo negro</h1>
+          <h2>¿Cómo se hace?</h2>
+        </header>
+        <div class="content">
+          <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam
+            vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+          <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque
+            faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in
+            blandit. </p>
+        </div>
+      </article>
+
+      <article id="ac4">
+        <h1>Tiempos modernos</h1>
+        <p>Una nueva era</p>
+
+        <div class="content">
+          <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam
+            vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum.</p>
+          <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque
+            faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in
+            blandit. </p>
+        </div>
+      </article>
+    </div>
+    <article id="ac5">
+      <header>
+        <h1>CSS Transitions - The State of Play</h1>
+        <h2>The future?</h2>
+      </header>
+
+      <div class="content">
+        <p>Maecenas quis tortor arcu. Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam
+          vestibulum, arcu sodales feugiat consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+        <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque
+          faucibus vestibulum.</p>
+        <p>Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat
+          consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+
+        <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque
+          faucibus vestibulum. Nulla at. vestibulum. Nulla at.</p>
+        <p>Vivamus rutrum nunc non neque consectetur quis placerat neque lobortis. Nam vestibulum, arcu sodales feugiat
+          consectetur, nisl orci bibendum elit, eu euismod magna sapien ut nibh.</p>
+
+        <p>Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque
+          faucibus vestibulum. Nulla at. vestibulum. Nulla at.</p>
+      </div>
+    </article>
+
+  </main>
+</body>
+
+</html>
