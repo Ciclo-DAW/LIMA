@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <title>Actividad 4</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <fieldset>
+          <legend>Datos persoais</legend>
+          <p>
+            <label>
+              Nome:
+              <input type="text" name="nome" id="nome" placeholder="Escribe o teu nome" autofocus required />
+            </label>
+
+            <label>
+              Apelidos
+              <input
+                type="text"
+                name="apelidos"
+                placeholder="Escribe os teus apelidos"
+                id="apelidos"
+                required
+              />
+            </label>
+          </p>
+          <p>
+            <label>
+              Data de nacemento:
+              <input type="text" name="data" id="data" placeholder="dd / mm / aaa" autofocus />
+            </label>
+
+            <label for="lugar">
+              Lugar de nacemento:
+              <input type="text" name="lugar" id="lugar" />
+            </label>
+          </p>
+          <p>
+            <label for="dni">
+              DNI:
+              <input
+                type="text"
+                name="dni"
+                id="dni"
+                placeholder="DNI"
+                pattern="[0-9]{8}[A-Z]"
+                required
+                title="El DNI deben ser 8 numeros y una letra mayuscula"
+              />
+            </label>
+
+            <label>
+              Sexo:
+              <input type="radio" name="hm" id="h" value="h" />
+              <label for="h">Home </label>
+              <input type="radio" name="hm" id="m" value="m" />
+              <label for="h">Muller </label>
+            </label>
+          </p>
+          <p>
+            <label for="estatura">
+              Estatura (en cm):
+              <input type="number" name="estatura" id="estatura" step="0.1" min="0" size="10" />
+            </label>
+
+            <label for="peso">
+              Peso (en kg):
+              <input type="number" name="peso" id="peso" step="0.1" min="0" />
+            </label>
+
+            <label for="cor">
+              Cor de pel:
+              <input type="color" name="cor" id="cor" />
+            </label>
+          </p>
+          <p>
+            <label for="email">
+              Correo electronico:
+              <input type="email" name="email" id="email" />
+            </label>
+
+            <label for="web">
+              Web persoal:
+              <input type="url" name="web" id="web" />
+            </label>
+          </p>
+          <p>
+            <label for="tlf">
+              Teléfono:
+              <input type="tel" name="tlf" id="tlf" />
+            </label>
+            <label for="movil">
+              Teléfono movil:
+              <input type="tel" name="movil" id="movil" />
+            </label>
+          </p>
+          <p>
+            <label for="pass">
+              Contrasinal:
+              <input type="text" name="pass" id="pass" placeholder="Contrasinal" required />
+            </label>
+            <label for="repass">
+              Repetir contrasinal:
+              <input type="text" name="repass" id="repass" placeholder="Contrasinal" required />
+            </label>
+          </p>
+          <p>
+            <label for="foto">
+              Fotografía:
+              <input type="file" name="foto" id="foto" />
+            </label>
+          </p>
+        </fieldset>
+      </div>
+      <div>
+        <fieldset>
+          <legend>Dirección</legend>
+          <p>
+            <label for="via">
+              Via:
+              <input type="text" name="via" id="via" list="listavias" size="10" />
+              <datalist id="listavias">
+                <option value="Rúa"></option>
+                <option value="Avenida"></option>
+                <option value="Estrada"></option>
+              </datalist>
+            </label>
+
+            <label for="direccion">
+              Enderezo:
+              <input type="text" name="direccion" id="direccion" />
+            </label>
+
+            <label for="numero">
+              Nº:
+              <input type="text" name="numero" id="numero" maxlength="3" size="3" />
+            </label>
+            <label for="piso">
+              Piso:
+              <input
+                type="text"
+                name="piso"
+                id="piso"
+                size="4"
+                maxlength="3"
+                pattern="(1[0-2]|[1-9])[a-z]"
+                title="El piso debe ser un numero hasta 12 y una letra minuscula"
+              />
+            </label>
+          </p>
+          <p>
+            <label for="cp">
+              CP:
+              <input type="text" name="cp" id="cp" size="10" maxlength="5" />
+            </label>
+            <label for="poboacion">
+              Poboacion:
+              <input type="text" name="poboacion" id="poboacion" />
+            </label>
+            <label for="provincia">
+              Provincia:
+              <select name="provincia" id="provincia">
+                <optgroup label="Galicia">
+                  <option>A Coruña</option>
+                  <option>Lugo</option>
+                  <option>Ourense</option>
+                  <option>Pontevedra</option>
+                </optgroup>
+
+                <optgroup label="Euskadi"
+                  ><option>Araba</option>
+                  <option>Bizkaia</option>
+                  <option>Guipuzcoa</option>
+                </optgroup>
+
+                <optgroup label="Extremadura">
+                  <option>Cáceres</option>
+                  <option>Badajoz</option>
+                </optgroup>
+
+                <optgroup label="Cataluña"
+                  ><option>Barcelona</option>
+                  <option>Tarragona</option>
+                  <option>Lleida</option>
+                  <option>Girona</option>
+                </optgroup>
+
+                <optgroup label="Aragón"
+                  ><option>Huesca</option>
+                  <option>Zaragoza</option>
+                  <option>Teruel</option>
+                </optgroup>
+                <optgroup label="Navarra">
+                  <option>Navarra</option>
+                </optgroup>
+              </select>
+            </label>
+          </p>
+        </fieldset>
+      </div>
+      <div>
+        <fieldset>
+          <legend>Aficións</legend>
+          <p>
+            <label for="musica">
+              <input type="checkbox" name="musica" id="musica" />
+              Música
+            </label>
+            <label for="deportes">
+              <input type="checkbox" name="deportes" id="deportes" />
+              Deportes
+            </label>
+            <label for="natureza">
+              <input type="checkbox" name="natureza" id="natureza" />
+              Natureza
+            </label>
+            <label for="videoxogos">
+              <input type="checkbox" name="videoxogos" id="videoxogos" />
+              Videoxogos
+            </label>
+            <label for="tecnoloxia">
+              <input type="checkbox" name="tecnoloxia" id="tecnoloxia" />
+              Tecnoloxía
+            </label>
+            <label for="cine">
+              <input type="checkbox" name="cine" id="cine" />
+              Cine
+            </label>
+            <label for="origami">
+              <input type="checkbox" name="origami" id="origami" />
+              Origami
+            </label>
+            <label for="manga">
+              <input type="checkbox" name="manga" id="manga" />
+              Manga
+            </label>
+            <label for="fotografia">
+              <input type="checkbox" name="fotografia" id="fotografia" />
+              Fotografía
+            </label>
+            <label for="cocina">
+              <input type="checkbox" name="cocina" id="cocina" />
+              Cociña
+            </label>
+            <label for="bricolaxe">
+              <input type="checkbox" name="bricolaxe" id="bricolaxe" />
+              Bricolaxe
+            </label>
+            <label for="meditacion">
+              <input type="checkbox" name="meditacion" id="meditacion" />
+              Meditación
+            </label>
+          </p>
+          <p>
+            <label for="aficions">Outras aficións: </label>
+            <textarea
+              name="aficions"
+              id="aficions"
+              style="width: 100%;"
+              placeholder="Escribe outras aficións"
+            ></textarea>
+          </p>
+        </fieldset>
+      </div>
+      <p class="buttons">
+        <button type="submit">Enviar Datos</button>
+        <button type="reset">Borrar Datos</button>
+      </p>
+    </form>
+  </body>
+</html>
