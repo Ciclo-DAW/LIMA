@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+	<title>Actividade RSS Atom</title>
+  <subtitle>Atom</subtitle>
+	<link href="https://www.info.org/rss" rel="self" />
+	<link href="https://www.info.org/rss" />
+	<id>https://www.info.org/</id>
+  <updated>2020-04-30T16:24:34Z</updated>
+	
+	
+	<entry>
+		<title>Tempo meteorolóxico Atom</title>
+		<link href="https://www.tiempo.es/ourense-o_carballino-es0or0019.html" />
+		<link rel="alternate" type="text/html" href="https://www.tiempo.es/ourense-o_carballino-es0or0019.html"/>
+		<id>https://www.tiempo.es/ourense-o_carballino-es0or0019.html</id>
+    <updated>2020-04-30T16:24:34Z</updated>
+		<summary>Tempo meteorolóxico na miña cidade</summary>
+	
+		<author>
+			<name>Brais Cao</name>
+			<email>braiscao@example.com</email>
+		</author>
+	</entry>
+
+	<entry>
+		<title>Noticia</title>
+		<link href="https://www.info.org/rss/noticia.html" />
+		<link rel="alternate" type="text/html" href="https://www.info.org/rss/noticia.html"/>
+		<id>https://www.info.org/noticia.html</id>
+    <updated>2020-04-30T16:26:34Z</updated>
+		<summary>Noticia no mesmo dominio</summary>
+	
+		<author>
+			<name>Brais Cao</name>
+			<email>braiscao@example.com</email>
+		</author>
+	</entry>
+
+</feed>

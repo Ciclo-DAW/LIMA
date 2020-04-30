@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+ <channel>
+  <title>Actividade RSS</title>
+  <description>Esta é unha actividade sobre RSS </description>
+  <link>https://www.info.org/rss</link>
+  <atom:link href="https://www.info.org/rss" rel="self" 
+type="application/rss+xml" />
+  <language>es</language>
+  
+  <item>
+   <title>Tempo meteorolóxico</title>
+   <description>Tempo meteorolóxico na miña cidade</description>
+   <link>https://www.tiempo.es/ourense-o_carballino-es0or0019.html</link>
+   <guid>https://www.tiempo.es/ourense-o_carballino-es0or0019.html</guid>
+  </item>
+
+  <item>
+   <title>Noticia</title>
+   <description>Noticia no mesmo dominio</description>
+   <link>https://www.info.org/rss/noticia.html</link>
+   <guid>https://www.info.org/rss/noticia.html</guid>
+  </item>
+  
+ </channel>
+</rss>
