@@ -3,8 +3,8 @@
   <xsd:annotation>
     <xsd:documentation xml:lang="Es-es">
       Esquema realización de pedidos
-      <data>2020-05-20</data>
       <autor>Brais Cao González</autor>
+      <data>2020-05-20</data>
     </xsd:documentation>
   </xsd:annotation>
   <xsd:element name="pedidos" type="pedidoDatos"/>
