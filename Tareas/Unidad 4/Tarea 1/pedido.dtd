@@ -1,0 +1,13 @@
+<!ELEMENT pedidos (pedido+)>
+<!ELEMENT pedido (direccion+,traballador,data,observacion?,artigo+)>
+<!ATTLIST pedido codigo CDATA #REQUIRED>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT traballador (#PCDATA)>
+<!ELEMENT data (#PCDATA)>
+<!ELEMENT observacion (#PCDATA)>
+<!ELEMENT artigo (unidades,prezo,observacions?,prazo)>
+<!ATTLIST artigo codigo CDATA #REQUIRED> 
+<!ELEMENT unidades (#PCDATA)> 
+<!ELEMENT prezo (#PCDATA)> 
+<!ELEMENT observacions (#PCDATA)> 
+<!ELEMENT prazo (#PCDATA)>

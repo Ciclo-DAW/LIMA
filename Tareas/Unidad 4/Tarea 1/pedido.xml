@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedidos
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation = "pedido.xsd" >
+<pedido codigo="A123A123">
+  <direccion>Calle Falsa, N123</direccion>
+  <traballador>Brais Cao Gonzalez</traballador>
+  <data>2020-05-20</data>
+  <observacion>Urxente</observacion>
+  <artigo codigo="AAA-000">
+    <unidades>1</unidades>
+    <prezo>5</prezo>
+    <observacions>Entrega en persoa</observacions>
+    <prazo>2</prazo>
+  </artigo>
+   <artigo codigo="AAA-001">
+    <unidades>4</unidades>
+    <prezo>10</prezo>
+    <observacions>Fraxil</observacions>
+    <prazo>2</prazo>
+  </artigo>
+  <artigo codigo="AAA-002">
+    <unidades>100</unidades>
+    <prezo>7</prezo>
+    <observacions>Transportar en horizontal</observacions>
+    <prazo>3</prazo>
+  </artigo>
+</pedido>
+<pedido codigo="A999B999">
+  <direccion>Calle De la Verdad, N123</direccion>
+  <direccion>Calle Unica, N1</direccion>
+  <traballador>Paco Perez</traballador>
+  <data>2020-04-25</data>
+  <artigo codigo="BBB-001">
+    <unidades>8</unidades>
+    <prezo>500</prezo>
+    <observacions>Transportar en vertical</observacions>
+    <prazo>1</prazo>
+  </artigo>
+  <artigo codigo="BBB-002">
+    <unidades>200</unidades>
+    <prezo>10</prezo>
+    <observacions />
+    <prazo>10</prazo>
+  </artigo>
+</pedido>
+</pedidos>

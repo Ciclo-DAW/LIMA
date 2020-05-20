@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xsd:schema xmlns:xsd = "http://www.w3.org/2001/XMLSchema" >
+  <xsd:annotation>
+    <xsd:documentation xml:lang="Es-es">
+    Esquema realización de pedidos
+    <fecha>2020-05-20</fecha>
+    <autor>Brais Cao González</autor>
+    </xsd:documentation>
+  </xsd:annotation>
+  <xsd:element name="pedidos" type="pedidoDatos"/>
+  <xsd:complexType name="pedidoDatos">
+    <xsd:sequence>
+      <xsd:element name="pedido" type="pedidoDatos" minOccurs="1" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="pedidoDatos">
+    <xsd:sequence>
+      <xsd:element name="direccion" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="traballador" type="xsd:string"/>
+      <xsd:element name="data" type="xsd:date" />
+      <xsd:element name="observacion" type="xsd:string" minOccurs="0" />
+      <xsd:element name="artigo" type="artigoDatos" minOccurs="1" maxOccurs="unbounded" />
+    </xsd:sequence>
+    <xsd:attribute name="codigo" type="codigoTipo" use="required" />
+  </xsd:complexType>
+  <xsd:simpleType name="codigoTipo">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[A-Za-z]([A-Za-z0-9]){7}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType name="artigoDatos">
+    <xsd:sequence>
+      <xsd:element name="unidades">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:positiveInteger">
+            <xsd:minInclusive value="1" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="prezo">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:decimal">
+           <xsd:minInclusive value="1" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element name="observacions" type="xsd:string" />
+      <xsd:element name="prazo">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:positiveInteger">
+            <xsd:minInclusive value="1" />
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="codigo" type="codigoArtigo" use="required" />
+  </xsd:complexType>
+  <xsd:simpleType name="codigoArtigo">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[A-Z]{3}-[0-9]{3}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>
