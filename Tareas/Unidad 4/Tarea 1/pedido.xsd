@@ -2,9 +2,9 @@
 <xsd:schema xmlns:xsd = "http://www.w3.org/2001/XMLSchema" >
   <xsd:annotation>
     <xsd:documentation xml:lang="Es-es">
-    Esquema realización de pedidos
-    <fecha>2020-05-20</fecha>
-    <autor>Brais Cao González</autor>
+      Esquema realización de pedidos
+      <data>2020-05-20</data>
+      <autor>Brais Cao González</autor>
     </xsd:documentation>
   </xsd:annotation>
   <xsd:element name="pedidos" type="pedidoDatos"/>
